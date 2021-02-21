@@ -3,7 +3,7 @@
         <img class="logo-history img-fluid" src="assets/icons/coso.png" alt="logo" />
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="icon ion-md-menu"></span>
+  <span class="icon ion-md-menu"></span>
 </button>
     <section class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto text-center ml-4">
@@ -19,8 +19,8 @@
         </ul>
 
         <article class="login d-flex flex-row justify-content-center mt-4">
-            <section class="icon-details">
-                <a id="login1" class="nav-link" href="#">
+            <section [routerLink]="['/login']" class="icon-details">
+                <a id="login1" class="nav-link">
                     <img src="assets/icons/user.png" alt="user" width="35px">
                 </a>
                 <p id="text">Login</p>

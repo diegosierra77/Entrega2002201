@@ -1,0 +1,37 @@
+<section id="menu" class="bg-primary p-4">
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <a class="navbar-brand" href="#">
+      <img
+        src="assets/icons/home-outline.svg"
+        alt="Home"
+        style="width: 40px; background-color: rgb(195, 195, 199)"
+      />
+    </a>
+    <h5 class="text-white">Contact us...</h5>
+  </nav>
+</section>
+<form class="p-3" ngNativeValidate (ngSubmit)="contact()">
+  <section>
+    <article class="form-group">
+      <label for="FormControlNombre">Name:</label>
+      <input name="name" type="name" [(ngModel)]="Info.name" [ngModelOptions]={standalone:true} class="form-control" id="FormControlNombre"/>
+      <small *ngIf="InfoValidator.name" id="nameHelp" class="form-text text-danger">Enter the name</small>
+    </article>
+    <article class="form-group">
+      <label for="FormControlEmail">Email address:</label>
+      <input name="email" type="email" [(ngModel)]="Info.email" [ngModelOptions]={standalone:true} class="form-control" id="FormControlEmail" placeholder="name@example.com"/>
+      <small *ngIf="InfoValidator.email" id="emailHelp" class="form-text text-danger">Enter the EMail</small>
+    </article>
+    <article class="form-group">
+      <label for="FormControlCelular">Cell phone:</label>
+      <input name="phone" type="phone" [(ngModel)]="Info.phone" [ngModelOptions]={standalone:true} class="form-control" id="FormControlCelular" placeholder="300 1234567"/>
+      <small *ngIf="InfoValidator.phone" id="phoneHelp" class="form-text text-danger">Enter the Cell Phone</small>
+    </article>
+    <article class="form-group">
+      <label for="FormControlMensaje">Message:</label>
+      <textarea name="message" type="message" [(ngModel)]="Info.message" [ngModelOptions]={standalone:true} class="form-control" id="FormControlMensaje" rows="3"></textarea>
+      <small *ngIf="InfoValidator.message" id="messageHelp" class="form-text text-danger">Enter the message</small>
+    </article>
+  </section>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
