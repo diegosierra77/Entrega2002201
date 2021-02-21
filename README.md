@@ -1,48 +1,24 @@
-# BIT Angular
+# History BIT
+## Diego Alejandro Sierra (20.02.2021)
+## Profesor: Oscar Felipe Guerrero Amado
 
-## Instalación de herramientas
-* [NodeJs](https://nodejs.org/es/)
+![N|Solid](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxe3DXuY6-b4sJ-KY9HQTDvn_CxMILNQHvyQ&usqp=CAU)
 
-`node -v`
-* [Npm](https://www.npmjs.com/)
+Tomando como referencia el proyecto que hemos trabajado en las sesiones, en la página principal del proyecto (IndexComponent) deben agregar las siguientes secciones:
+- "Characters of History”, la cual va a contener una serie de imágenes con una breve descripción.
+- “Contact us”, formulario que permita ingresar el nombre, correo, número de celular y un mensaje.
+- Footer, deben agregar un menú que contenga todas las secciones de nuestra página, logos de redes sociales y derechos reservados con su nombre.
 
-`npm -v`
-* [Angular CLI](https://cli.angular.io/)
+> The overriding design goal for Markdown's
+> formatting syntax is to make it as readable
+> as possible. The idea is that a
+> Markdown-formatted document should be
+> publishable as-is, as plain text, without
+> looking like it's been marked up with tags
+> or formatting instructions.
 
-`ng version`
-
-* [Git](https://git-scm.com/downloads)
-
-`git `
-
-
-## HTML5
-![Sematica](https://miro.medium.com/max/1124/0*X7MpwofsIa7mO2HG.)
-
-Ajustes de codigo para implementar [Semantica HTML5](https://www.arkaitzgarro.com/html5/capitulo-2.html).
-
-## Git
-` git clone {url_https} `
-Ejemplo:
-` git clone https://github.com/ofaaoficial/bit-angular-base.git `
-
-## VSCode extensions
-* Bracket Pair Colorize
-* Material Icon Theme
-* TypeScript Hero
-* Angular Snippets (Version 11)
-* JS-CSS-HTML Formatter
-
-
-## Estructuración del proyecto
-
-```files
-/assets
-   /css
-   /js
-index.html
-```
-
-## Rutas en Angular
-
-Ejemplo de implementación [Router Angular](https://stackblitz.com/edit/angular-lcjlwn?file=src%2Fapp%2Fapp.component.html).
+## Recursos
+Se usan los siguientes "open soruce":
+- [AngularJS] - HTML enhanced for web apps!
+- [Twitter Bootstrap] - great UI boilerplate for modern web apps
+- [node.js] - Evented I/O for the backend
