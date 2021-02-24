@@ -7,9 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit(): void {
   }
+
+  // loginuser = ""
+  // userInfo = {
+  //   email:"",
+  //   password:"",
+  //   username:""
+  // }
+
+  // updatename(): {
+  //   var target = document.getElementById('loginuser')
+  //   console.log("User info 2:", localStorage.getItem("userInfo"))
+  //   this.userInfo = JSON.parse(localStorage.getItem("userInfo"))
+  //   this.loginuser = this.userInfo.email
+  //   console.log("Otro:", this.loginuser)
+  //   // var x = angular.element(document.getElementById("loginuser"));
+  //   // document.getElementById("loginuser").innerHTML = this.userInfo.email
+  // }
 
 }

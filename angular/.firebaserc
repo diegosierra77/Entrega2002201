@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "proyectoangular-6cadc": {
+      "hosting": {
+        "angular-bit-project": [
+          "proyectoangular-6cadc"
+        ]
+      }
+    }
+  }
+}

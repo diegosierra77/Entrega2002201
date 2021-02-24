@@ -35,19 +35,20 @@ export class LoginComponent implements OnInit {
       this.userInfoValidator.email=false;
     }
     if (this.userInfo.username === ""){
-      console.log("Usuario vacio")
+      //console.log("Usuario vacio")
       this.userInfoValidator.username=true;
     }else{
       this.userInfoValidator.username=false;
     }
     if (this.userInfo.password === ""){
-      console.log("Clave vacia")
+      //console.log("Clave vacia")
       this.userInfoValidator.password=true;
     }else{
       this.userInfoValidator.password=false;
     }
     if(this.userInfo.email !== "" && this.userInfo.username !== "" && this.userInfo.password !== ""){
       localStorage.setItem("userInfo",JSON.stringify(this.userInfo))
+      alert("Bienvenido: " + JSON.parse(JSON.stringify(this.userInfo.email)))
       this.router.navigate(['/'])
     }
     this.variableTemporal=localStorage.getItem("userInfo")
