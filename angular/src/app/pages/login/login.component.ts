@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
+import firebase from 'firebase/app';
 import { Router } from "@angular/router";
 
 @Component({
@@ -9,6 +11,7 @@ import { Router } from "@angular/router";
 export class LoginComponent implements OnInit {
 
   constructor(
+    public auth: AngularFireAuth,
     private router:Router
   ) { }
 
@@ -48,14 +51,23 @@ export class LoginComponent implements OnInit {
     }
     if(this.userInfo.email !== "" && this.userInfo.username !== "" && this.userInfo.password !== ""){
       localStorage.setItem("userInfo",JSON.stringify(this.userInfo))
-      alert("Bienvenido: " + JSON.parse(JSON.stringify(this.userInfo.email)))
-      this.router.navigate(['/'])
+      //this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+      //this.auth.signInWithEmailAndPassword(this.userInfo.email, this.userInfo.password);
+      firebase.auth().signInWithEmailAndPassword(this.userInfo.email, this.userInfo.password)
+        .then((user) => {
+          this.router.navigate(['/'])
+        })
+        .catch((error) => {
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          alert("Error: " + errorCode + ", " + errorMessage);
+        }
+        )
     }
     this.variableTemporal=localStorage.getItem("userInfo")
-    console.log("Temp", this.variableTemporal)
-    console.log("User info", this.userInfo)
-    console.log("User info validate", this.userInfoValidator)
+    // console.log("Temp", this.variableTemporal)
+    //console.log("User info", this.userInfo)
+    // console.log("User info validate", this.userInfoValidator)
   }
-
 }
 

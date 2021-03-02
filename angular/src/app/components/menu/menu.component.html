@@ -3,8 +3,8 @@
         <img class="logo-history img-fluid" src="assets/icons/coso.png" alt="logo" />
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="icon ion-md-menu"></span>
-</button>
+        <span class="icon ion-md-menu"></span>
+    </button>
     <section class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto text-center ml-4">
             <li class="nav-item active">
@@ -17,30 +17,38 @@
                 <a class="nav-link" href="#">About us</a>
             </li>
         </ul>
-
         <article class="login d-flex flex-row justify-content-center mt-4">
-            <label for="loginuser" id="loginuser" name="loginuser" class="navbar-text d-flex m-3"><b></b></label>
-            <section [routerLink]="['/login']" class="icon-details">
+            <div *ngIf="auth.user | async as user; else showLogin">
+                <h1>Welcome {{ user.email }}!</h1>
+                <button (click)="logout()">
+                    <img src="assets/icons/salir.svg" alt="logout" width="35px">
+                </button>
+            </div>
+            <ng-template #showLogin>
+                <button [routerLink]="['/login']" class="icon-details">
+                    <a id="singin" class="nav-link">
+                        <img src="assets/icons/user.png" alt="singin" width="35px">
+                    </a>
+                    <p id="text">Login</p>
+                </button>
+            </ng-template>
+
+            <!-- <label for="loginuser" id="loginuser" name="loginuser" class="navbar-text d-flex m-3"><b>{{ loginuser }}</b></label> -->
+            <!-- <section [routerLink]="['/login']" class="icon-details">
                 <a id="singin" class="nav-link">
                     <img src="assets/icons/user.png" alt="singin" width="35px">
                 </a>
                 <p id="text">Login</p>
-            </section>
-            <!-- <section class="icon-details">
-                <a id="login1" class="nav-link">
-                    <img src="assets/icons/log-in-outline.svg" alt="user" width="35px">
-                </a>
-                <p id="text">Login</p>
             </section> -->
-            <section class="icon-details">
-                <a id="login2" class="nav-link" href="#">
+            <!-- <section class="icon-details">
+                <a (click)="logout()" id="login2" class="nav-link" href="#">
                     <img src="assets/icons/salir.svg" alt="logout" width="35px">
                 </a>
                 <p id="text2">Logout</p>
             </section>
             <section class="icon-details">
                 <p class="nav-user" id="loginUser"></p>
-            </section>
+            </section> -->
         </article>
     </section>
 </nav>

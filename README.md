@@ -1,5 +1,5 @@
 # History BIT
-## Diego Alejandro Sierra (20.02.2021)
+## Diego Alejandro Sierra (02.03.2021)
 ## Profesor: Oscar Felipe Guerrero Amado
 
 ![N|Solid](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxe3DXuY6-b4sJ-KY9HQTDvn_CxMILNQHvyQ&usqp=CAU)

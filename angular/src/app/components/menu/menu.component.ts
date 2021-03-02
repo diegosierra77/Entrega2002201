@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
+import firebase from 'firebase/app';
 
 @Component({
   selector: 'app-menu',
@@ -7,27 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { 
+  constructor(public auth: AngularFireAuth) {
+//    this.userInfo = JSON.parse(localStorage.getItem("userInfo"))
+//    this.loginuser = "Bienvenido: " + this.userInfo.email
+  }
+
+  // login() {
+  //   this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+  // }
+  logout() {
+    this.auth.signOut();
+    console.log("Logout");
   }
 
   ngOnInit(): void {
   }
-
-  // loginuser = ""
-  // userInfo = {
-  //   email:"",
-  //   password:"",
-  //   username:""
-  // }
-
-  // updatename(): {
-  //   var target = document.getElementById('loginuser')
-  //   console.log("User info 2:", localStorage.getItem("userInfo"))
-  //   this.userInfo = JSON.parse(localStorage.getItem("userInfo"))
-  //   this.loginuser = this.userInfo.email
-  //   console.log("Otro:", this.loginuser)
-  //   // var x = angular.element(document.getElementById("loginuser"));
-  //   // document.getElementById("loginuser").innerHTML = this.userInfo.email
-  // }
 
 }

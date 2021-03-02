@@ -10,7 +10,7 @@
               <small *ngIf="userInfoValidator.email" id="emailHelp" class="form-text text-muted">Enter the EMail</small>
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">User Name</label>
+                <label for="exampleInputUser1">User Name</label>
                 <input name="username" [(ngModel)]="userInfo.username" [ngModelOptions]={standalone:true} type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 <small *ngIf="userInfoValidator.username" id="emailHelp" class="form-text text-danger">User requerid!</small>
               </div>
@@ -19,11 +19,7 @@
               <input name="password" [(ngModel)]="userInfo.password" [ngModelOptions]={standalone:true} type="password" class="form-control" id="exampleInputPassword1">
               <small *ngIf="userInfoValidator.password" id="emailHelp" class="form-text text-warning">Please, enter password</small>
             </div>
-            <!-- <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div> -->
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Login</button>
           </form>
     </section>
 </div>
